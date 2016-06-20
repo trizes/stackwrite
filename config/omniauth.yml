@@ -1,0 +1,16 @@
+common: &common
+  facebook:
+    key: '153900925026466'
+    secret : 'b4df5a467d1ecf11a299dddf38e9a31c'
+  twitter:
+    key: 'asdjhasxas'
+    secret : 'abx'
+
+development:
+  <<: *common
+
+test:
+  <<: *common
+
+production:
+  <<: *common
