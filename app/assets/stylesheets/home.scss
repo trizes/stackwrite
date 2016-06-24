@@ -43,6 +43,7 @@
       width: 300px;
       margin-bottom: 1.33em;
       justify-content: space-around;
+      list-style: none;
       .facebook, .google, .vk {
         display: block;
         text-indent: -9999px;
@@ -50,15 +51,15 @@
         height: 70px;
         background-size: 70px 70px;
       }
-      .facebook {
-        background-image: asset-url("fb.svg");
-      }
-      .google {
-        background-image: asset-url("google.svg");
-      }
-      .vk {
-        background-image: asset-url("vk.svg");
-      }
+      // .facebook {
+      //   background-image: asset-url("fb.svg");
+      // }
+      // .google {
+      //   background-image: asset-url("google.svg");
+      // }
+      // .vk {
+      //   background-image: asset-url("vk.svg");
+      // }
     }
   }
 

@@ -6,9 +6,9 @@
   <div class="login">
     <h4>Login with</h4>
     <div class="social">
-      <li class="facebook"><%= link_to "facebook" "auth/facebook" %></li>
-      <li class="google"><%= link_to "google" "auth/google" %></li>
-      <li class="vk"><%= link_to "vk" "auth/vk" %></li>
+      <li><%= link_to "auth/facebook" do %><%= image_tag('fb.svg', class: 'facebook') %><% end %></li>
+      <li><%= link_to "auth/google_oauth2" do %><%= image_tag('google.svg', class: 'google') %><% end %></li>
+      <li><%= link_to "auth/vkontakte" do %><%= image_tag('vk.svg', class: 'vk') %><% end %></li>
     </div>
   </div>
 </div>
