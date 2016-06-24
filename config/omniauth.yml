@@ -1,10 +1,13 @@
 common: &common
   facebook:
-    key: '153900925026466'
-    secret : 'b4df5a467d1ecf11a299dddf38e9a31c'
-  twitter:
-    key: 'asdjhasxas'
-    secret : 'abx'
+    key:    '153900925026466'
+    secret: 'b4df5a467d1ecf11a299dddf38e9a31c'
+  google:
+    key:    '212769964457-l0g7afuppeflbbt9orl1ca4elnnr19i7.apps.googleusercontent.com'
+    secret: 'e0JKofcBfgxzLS1bxCFaCz68'
+  vk:
+    key:    '5521673'
+    secret: 'v7tgx05ahs4JAaUujF8U'
 
 development:
   <<: *common
