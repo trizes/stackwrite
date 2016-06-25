@@ -1,11 +1,7 @@
 .login-home {
   height: 100vh;
   background: linear-gradient(to bottom, #ff6677 0%, #D6AB3E 100%);
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
-  display: flex;
+  @include displayFlex;
   flex-grow: 1;
   flex-direction: column;
   justify-content: center;

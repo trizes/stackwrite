@@ -1,17 +1,9 @@
 .omniauth {
-    display: -webkit-flex;
-    display: -moz-flex;
-    display: -ms-flex;
-    display: -o-flex;
-    display: flex;
+    @include displayFlex;
     flex-direction: column;
     align-items: center;
     .social {
-      display: -webkit-flex;
-      display: -moz-flex;
-      display: -ms-flex;
-      display: -o-flex;
-      display: flex;
+      @include displayFlex;
       width: 300px;
       margin-bottom: 1.33em;
       justify-content: space-around;
