@@ -42,4 +42,6 @@ group :test do
   gem 'site_prism'
   gem 'selenium-webdriver', '~> 2.53.3'
   gem "capybara-webkit"
+  gem 'factory_girl_rails'
+  gem 'shoulda-matchers'
 end
