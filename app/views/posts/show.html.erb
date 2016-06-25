@@ -1,3 +1,7 @@
-<input type="text">
-<button class="submit">Отправить</button>
-
+<div class="user-actions">
+  <% if @current_user %>
+    <%= cell(:typer) %>
+  <% else %>
+    <%= cell(:omniauth) %>
+  <% end %>
+</div>
