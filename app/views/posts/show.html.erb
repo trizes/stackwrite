@@ -1,7 +1,11 @@
 <div class="user-actions">
   <% if @current_user %>
-    <%= cell(:typer) %>
+    <%= cell(:typer, @current_user) %>
   <% else %>
     <%= cell(:omniauth) %>
   <% end %>
+</div>
+
+<div class="comments">
+
 </div>

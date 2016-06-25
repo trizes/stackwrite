@@ -22,3 +22,7 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+* TODO:
+1. Add acceptance test for logout action
+2. 

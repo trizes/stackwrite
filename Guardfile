@@ -21,6 +21,7 @@ guard 'livereload' do
     scss: :css,
     sass: :css,
     js: :js,
+    es6: :js,
     coffee: :js,
     html: :html,
     png: :png,
@@ -50,6 +51,7 @@ guard 'livereload' do
 
   # file needing a full reload of the page anyway
   watch(%r{app/views/.+\.(#{rails_view_exts * '|'})$})
+  watch(%r{app/cells/.+\.(#{rails_view_exts * '|'})$})
   watch(%r{app/helpers/.+\.rb})
   watch(%r{config/locales/.+\.yml})
 end
