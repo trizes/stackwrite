@@ -4,4 +4,6 @@ Rails.application.routes.draw do
   post 'stack/:id' => 'posts#create', as: 'stack_create'
   get 'auth/:provider/callback', to: "sessions#create"
   delete 'sign_out', to: 'sessions#destroy', as: 'sign_out'
+
+  resources :authors
 end
