@@ -4,6 +4,6 @@
     <%= submit_tag("Отправить", class: 'submit') %>
   <% end %>
   <p class="name"><%= name %></p>
-  <%= image_tag('', data: { src: image }, class: 'profile-img') %>
+  <%= image_tag(image, class: 'profile-img') %>
   <%= link_to "Sign out", sign_out_path, method: :delete, class: 'sign-out' %>
 </div>

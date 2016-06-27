@@ -16,6 +16,7 @@ gem 'sprockets', '>=3.0.0.beta'
 gem 'sprockets-es6'
 
 gem 'jbuilder', '~> 2.0'
+gem 'will_paginate'
 
 # Authentication
 gem 'omniauth-facebook', '~> 3.0'
@@ -35,6 +36,7 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'guard-livereload', '~> 2.5', require: false
+  gem 'faker'
 end
 
 group :test do

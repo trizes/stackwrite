@@ -6,6 +6,9 @@
   <% end %>
 </div>
 
-<div class="comments">
-
+<div id="posts">
+  <ol class="posts">
+    <%= render @posts %>
+  </ol>
+  <%= will_paginate @posts %>
 </div>
