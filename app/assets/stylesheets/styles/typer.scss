@@ -5,11 +5,11 @@
   align-items: center;
   flex-grow: 1;
   flex-direction: row;
-  .create-post-form {
+  #new_post {
     @include displayFlex;
     align-items: center;
     flex-grow: 0.7;
-    #entry {
+    #post_body {
       @include displayFlex;
       flex-grow: 1;
       font-family: sans-serif;

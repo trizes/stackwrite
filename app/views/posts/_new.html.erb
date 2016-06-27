@@ -1,0 +1,13 @@
+<div class="typer">
+  <%= form_for @new_post, url: author_posts_path do |f| %>
+    <%= render 'shared/error_messages', object: f.object %>
+    <%= f.text_area :body, placeholder: "Текст сообщения..." %>
+    <%= f.submit "Отправить", class: 'submit' %>
+  <% end %>
+  <div class="info">
+    <p class="name"><%= @current_author.name %></p>
+    <span class="count"><span>Author of <%= pluralize(@current_author.posts.count, "posts") %></span></span>
+  </div>
+  <%= image_tag(@current_author.image, class: 'profile-img') %>
+  <%= link_to "Sign out", sign_out_path, method: :delete, class: 'sign-out' %>
+</div>

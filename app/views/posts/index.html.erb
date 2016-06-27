@@ -1,6 +1,6 @@
 <div class="author-actions">
   <% if @current_author %>
-    <%= cell(:typer, @current_author) %>
+    <%= render partial: 'new' %>
   <% else %>
     <%= cell(:omniauth) %>
   <% end %>
