@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
-  def show
-    @author = Author.find(params[:id])
+  def index
+    @author = Author.find(params[:author_id])
     @posts = @author.posts.paginate(page: params[:page])
   end
 

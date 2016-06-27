@@ -7,6 +7,6 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 authors = Author.order(:created_at).take(3)
 50.times do
-  body = Faker::Lorem.sentence(5)
+  body = Faker::Hipster.sentence(3, false, 4)
   authors.each { |author| author.posts.create!(body: body) }
 end

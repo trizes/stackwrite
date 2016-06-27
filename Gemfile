@@ -27,6 +27,7 @@ group :development, :test do
   gem 'pry-byebug'
   gem 'pry-rails'
   gem 'rspec-rails'
+  gem 'faker'
 end
 
 group :development do
@@ -36,7 +37,6 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'guard-livereload', '~> 2.5', require: false
-  gem 'faker'
 end
 
 group :test do
