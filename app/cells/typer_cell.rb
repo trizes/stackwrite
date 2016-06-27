@@ -5,4 +5,10 @@ class TyperCell < Cell::ViewModel
   def show
     render
   end
+
+  private
+
+  def post_count
+    model.posts.count
+  end
 end

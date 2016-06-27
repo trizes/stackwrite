@@ -12,7 +12,7 @@ RSpec.describe PostsController, type: :controller do
     end
   end
 
-  describe '#destroy' do
-    it ''
+  describe '#create' do
+    xit ''
   end
 end

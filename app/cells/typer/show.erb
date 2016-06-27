@@ -3,7 +3,10 @@
     <%= text_area_tag :entry, '', placeholder: "Текст сообщения" %>
     <%= submit_tag("Отправить", class: 'submit') %>
   <% end %>
-  <p class="name"><%= name %></p>
+  <div class="info">
+    <p class="name"><%= name %></p>
+    <span class="count"><span>Author of <%= pluralize(post_count, "posts") %></span></span>
+  </div>
   <%= image_tag(image, class: 'profile-img') %>
   <%= link_to "Sign out", sign_out_path, method: :delete, class: 'sign-out' %>
 </div>

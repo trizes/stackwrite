@@ -39,9 +39,12 @@
     }
   }
 
-  .name {
-    font-weight: 700;
-    margin: 0 10px;
+  .info {
+    text-align: center;
+    .name {
+      font-weight: 700;
+      margin: 0 10px;
+    }
   }
 
   .profile-img {
