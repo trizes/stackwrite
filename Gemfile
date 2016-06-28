@@ -27,16 +27,17 @@ group :development, :test do
   gem 'pry-byebug'
   gem 'pry-rails'
   gem 'rspec-rails'
+  gem 'faker'
 end
 
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
   gem 'better_errors'
+  gem 'binding_of_caller'
   gem 'listen', '~> 3.0.5'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'guard-livereload', '~> 2.5', require: false
-  gem 'faker'
 end
 
 group :test do

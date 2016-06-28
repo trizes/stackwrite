@@ -1,9 +1,0 @@
-<div class="typer">
-  <%= form_tag("/stack/create", method: "post", class: 'create-post-form') do %>
-    <%= text_area_tag :entry, '', placeholder: "Текст сообщения" %>
-    <%= submit_tag("Отправить", class: 'submit') %>
-  <% end %>
-  <p class="name"><%= name %></p>
-  <%= image_tag(image, class: 'profile-img') %>
-  <%= link_to "Sign out", sign_out_path, method: :delete, class: 'sign-out' %>
-</div>

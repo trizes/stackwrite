@@ -5,8 +5,8 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-users = User.order(:created_at).take(3)
+authors = Author.order(:created_at).take(3)
 50.times do
-  body = Faker::Lorem.sentence(5)
-  users.each { |user| user.posts.create!(body: body) }
+  body = Faker::Hipster.sentence(3, false, 4)
+  authors.each { |author| author.posts.create!(body: body) }
 end

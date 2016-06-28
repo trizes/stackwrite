@@ -13,6 +13,15 @@
 
 ActiveRecord::Schema.define(version: 20160625153353) do
 
+  create_table "authors", force: :cascade do |t|
+    t.string   "provider"
+    t.string   "uid"
+    t.string   "name"
+    t.string   "image"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "comments", force: :cascade do |t|
     t.integer  "post_id"
     t.text     "body"
@@ -22,21 +31,12 @@ ActiveRecord::Schema.define(version: 20160625153353) do
   end
 
   create_table "posts", force: :cascade do |t|
-    t.integer  "user_id"
+    t.integer  "author_id"
     t.text     "body"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["user_id", "created_at"], name: "index_posts_on_user_id_and_created_at"
-    t.index ["user_id"], name: "index_posts_on_user_id"
-  end
-
-  create_table "users", force: :cascade do |t|
-    t.string   "provider"
-    t.string   "uid"
-    t.string   "name"
-    t.string   "image"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.index ["author_id", "created_at"], name: "index_posts_on_author_id_and_created_at"
+    t.index ["author_id"], name: "index_posts_on_author_id"
   end
 
 end

@@ -1,0 +1,15 @@
+<div class="author-actions">
+  <% if @current_author %>
+    <%= render partial: 'new' %>
+  <% else %>
+    <%= cell(:omniauth) %>
+    <p class="cant-post">*Для добавления и комментирования сообщений выполните вход</p>
+  <% end %>
+</div>
+
+<div id="posts">
+  <ol class="posts">
+    <%= render @posts %>
+  </ol>
+  <%= will_paginate @posts %>
+</div>
