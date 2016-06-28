@@ -5,7 +5,9 @@
     Posted <%= time_ago_in_words(post.created_at) %> ago.
     From <%= post.author.provider %>.
   </span>
-  <a href="javascript:;" onclick="comments.toggleForm(this); return false;" class="post-reply">Reply</a>
+  <% if @current_author%>
+    <a href="javascript:;" onclick="comments.toggleForm(this); return false;" class="post-reply">Reply</a>
+  <% end %>
   <span class="post-body"><%= post.body %></span>
   <% if post.comments.any? %>
     <% post.comments.each do |comment| %>
@@ -15,9 +17,28 @@
           <span class="comment-author">Said</span>
           <%= link_to comment.author.name, author_posts_path(comment.author) %>
           <span><%= time_ago_in_words(post.created_at) %> ago.</span>
-          <a href="javascript:;" onclick="comments.toggleForm(this); return false;" class="comment-reply">Reply</a>
+          <% if @current_author %>
+            <a href="javascript:;" onclick="comments.toggleForm(this); return false;" class="comment-reply">Reply</a>
+          <% end %>
         </div>
       </div>
     <% end %>
   <% end %>
 </li>
+<!--
+
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Manager</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr v-for="post in posts">
+        <td>{{ post.body }}</td>
+      </tr>
+    </tbody>
+  </table>
+ -->

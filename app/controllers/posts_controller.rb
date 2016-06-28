@@ -3,6 +3,11 @@ class PostsController < ApplicationController
     @author = Author.find(params[:author_id])
     @posts = @author.posts.paginate(page: params[:page])
     @new_post = @author.posts.build
+
+    respond_to do |format|
+      format.html
+      format.json { render :json => @posts }
+    end
   end
 
   def create

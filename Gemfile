@@ -15,6 +15,7 @@ gem 'jquery-rails'
 gem 'sprockets', '>=3.0.0.beta'
 gem 'sprockets-es6'
 gem 'font-awesome-sass', '~> 4.6.2'
+gem 'vuejs-rails'
 
 gem 'jbuilder', '~> 2.0'
 gem 'will_paginate'

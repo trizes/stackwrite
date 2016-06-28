@@ -11,6 +11,6 @@ class SessionsController < ApplicationController
     id = session[:author_id]
     session[:author_id]  = nil
     session[:omniauth] = nil
-    redirect_to author_posts_path(author_id: id), notice: 'Successfully signed out'
+    redirect_to :back, notice: 'Successfully signed out'
   end
 end
