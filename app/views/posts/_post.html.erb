@@ -1,9 +1,9 @@
 <li id="post-<%= post.id %>">
   <%= image_tag(post.author.image, class: 'post-img') %>
-  <span class="author"><%= link_to post.author.name, author_path(post.author) %></span>
-  <span class="post-body"><%= post.body %></span>
+  <span class="author"><%= link_to post.author.name, author_path(post.author) %> </span>
   <span class="timestamp">
     Posted <%= time_ago_in_words(post.created_at) %> ago.
     From <%= post.author.provider %>.
   </span>
+  <span class="post-body"><%= post.body %></span>
 </li>

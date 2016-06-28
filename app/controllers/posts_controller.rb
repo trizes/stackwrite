@@ -9,7 +9,7 @@ class PostsController < ApplicationController
     @post = current_author.posts.build(post_params)
     if @post.save
       flash[:success] = "Post created."
-      redirect_to root_url
+      redirect_to author_posts_path
     else
       render root_url
     end
