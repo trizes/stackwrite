@@ -41,9 +41,18 @@
 
   .info {
     text-align: center;
-    .name {
+    .author {
       font-weight: 700;
       margin: 0 10px;
+      a {
+        color: #000;
+        text-decoration: none;
+        font-weight: bold;
+        &:hover {
+          text-decoration: underline;
+          color: #0084B4;
+        }
+      }
     }
   }
 

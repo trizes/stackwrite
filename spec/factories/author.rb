@@ -1,6 +1,6 @@
 FactoryGirl.define do
   factory :author do
-    provider Faker::Lorem.word
+    provider Faker::Hipster.word
     uid      Faker::Number.number(10)
     name     Faker::Name.name
     image    Faker::Avatar.image

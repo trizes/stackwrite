@@ -16,36 +16,72 @@
       padding: 10px 0;
       border-top: 1px solid #e8e8e8;
       line-height: 1.6;
-    }
-    .author {
-      margin-top: 5em;
-      padding-top: 0;
-      a {
-        color: #000;
-        text-decoration: none;
-        font-weight: bold;
-        &:hover {
-          text-decoration: underline;
-          color: #0084B4;
+      .author {
+        margin-top: 5em;
+        padding-top: 0;
+        a {
+          color: #000;
+          text-decoration: none;
+          font-weight: bold;
+          &:hover {
+            text-decoration: underline;
+            color: #0084B4;
+          }
         }
       }
-    }
-    .post-body {
-      display: block;
-      margin-left: 60px;
-    }
-    .timestamp {
-      display: inline;
-      font-size: 13px;
-      color: #8899a6;
-    }
-    .post-img {
-      float: left;
-      margin-right: 10px;
-      margin-top: 5px;
-      border-radius: 30px;
-      width: 50px;
-      height: 50px;
+      .post-body {
+        display: block;
+        margin-left: 60px;
+      }
+      .timestamp, .post-reply {
+        display: inline;
+        font-size: 13px;
+        color: #8899a6;
+      }
+      .post-reply {
+        text-decoration: none;
+        border-bottom: 1px dotted;
+        &:hover {
+          text-decoration: none;
+          border-bottom-style: solid;
+        }
+      }
+      .post-img {
+        float: left;
+        margin-right: 10px;
+        margin-top: 5px;
+        border-radius: 30px;
+        width: 50px;
+        height: 50px;
+      }
+      div[id^="comment-"] {
+        position: relative;
+        margin-left: 40px;
+        margin-top: 10px;
+        left: 50px;
+        &:before {
+          font-family: FontAwesome;
+          font-size: 14px;
+          content: "\f0f6";
+        }
+        .body {
+          margin-left: 8px;
+        }
+        .comment-footer {
+          font-size: 13px;
+          color: #8899a6;
+          margin-left: 21px;
+          a {
+            color: #8899a6;
+            text-decoration: none;
+            border-bottom: 1px dotted;
+            &:hover {
+              text-decoration: none;
+              border-bottom-style: solid;
+            }
+          }
+        }
+      }
     }
   }
 }
