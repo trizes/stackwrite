@@ -1,8 +1,6 @@
 source 'https://rubygems.org'
 
-
 gem 'rails', '>= 5.0.0.rc1', '< 5.1'
-gem 'sqlite3'
 gem 'puma', '~> 3.0'
 gem "cells-rails"
 gem "cells-erb"
@@ -15,7 +13,6 @@ gem 'jquery-rails'
 gem 'sprockets', '>=3.0.0.beta'
 gem 'sprockets-es6'
 gem 'font-awesome-sass', '~> 4.6.2'
-gem 'vuejs-rails'
 
 gem 'jbuilder', '~> 2.0'
 gem 'will_paginate'
@@ -26,6 +23,7 @@ gem "omniauth-google-oauth2"
 gem "omniauth-vkontakte"
 
 group :development, :test do
+  gem 'sqlite3'
   gem 'pry-byebug'
   gem 'pry-rails'
   gem 'rspec-rails'
