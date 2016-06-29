@@ -8,8 +8,10 @@
   <% if @current_author%>
     <a href="javascript:;" onclick="comments.toggleForm(this)" class="post-reply">Reply</a>
   <% end %>
-  <span class="post-body"><%= post.body %></span>
+    <span class="post-body"><%= post.body %></span>
+  <% if @current_author%>
   <%= render partial: 'comment_form', locals: { post: post } %>
+  <% end %>
   <% if post.comments.any? %>
     <% post.comments.each do |comment| %>
       <div id="comment-<%= comment.id %>">
