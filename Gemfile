@@ -24,12 +24,13 @@ gem 'omniauth-facebook', '~> 3.0'
 gem "omniauth-google-oauth2"
 gem "omniauth-vkontakte"
 
+gem 'faker' # moved to production group for heroku
+
 group :development, :test do
   gem 'sqlite3'
   gem 'pry-byebug'
   gem 'pry-rails'
   gem 'rspec-rails'
-  gem 'faker'
 end
 
 group :development do
