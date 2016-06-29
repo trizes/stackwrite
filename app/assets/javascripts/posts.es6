@@ -10,8 +10,14 @@ $(document).ready(() => {
 });
 
 function Comments() {
-  this.toggleForm = function(comment_id) {
-    console.log(comment_id);
+  this.toggleForm = function(element) {
+    $(element).siblings('.comment-form').toggle();
+  },
+  this.commentTemplate = function() {
+    return "<div class='comment-form'><input type='text' size='60'><button onclick='comments.submitComment(this)'>Reply!</button></div>";
+  },
+  this.submitComment = function(el) {
+    console.log(el)
   }
 };
 

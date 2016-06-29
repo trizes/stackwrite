@@ -6,9 +6,10 @@
     From <%= post.author.provider %>.
   </span>
   <% if @current_author%>
-    <a href="javascript:;" onclick="comments.toggleForm(this); return false;" class="post-reply">Reply</a>
+    <a href="javascript:;" onclick="comments.toggleForm(this)" class="post-reply">Reply</a>
   <% end %>
   <span class="post-body"><%= post.body %></span>
+  <%= render partial: 'comment_form', locals: { post: post } %>
   <% if post.comments.any? %>
     <% post.comments.each do |comment| %>
       <div id="comment-<%= comment.id %>">
@@ -18,27 +19,10 @@
           <%= link_to comment.author.name, author_posts_path(comment.author) %>
           <span><%= time_ago_in_words(post.created_at) %> ago.</span>
           <% if @current_author %>
-            <a href="javascript:;" onclick="comments.toggleForm(this); return false;" class="comment-reply">Reply</a>
+            <a href="javascript:;" @click="toggleForm" class="comment-reply">Reply</a>
           <% end %>
         </div>
       </div>
     <% end %>
   <% end %>
 </li>
-<!--
-
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Email</th>
-        <th>Manager</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr v-for="post in posts">
-        <td>{{ post.body }}</td>
-      </tr>
-    </tbody>
-  </table>
- -->
