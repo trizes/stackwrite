@@ -5,8 +5,10 @@
     <%= f.submit "Отправить", class: 'submit' %>
   <% end %>
   <div class="info">
-    <p class="name"><%= @current_author.name %></p>
-    <span class="count"><span>Author of <%= pluralize(@current_author.posts.count, "posts") %></span></span>
+    <p class="author">
+      <%= link_to @current_author.name, author_posts_path(@current_author.id) %>
+    </p>
+    <span class="count"><span>Author of <%= pluralize(@current_author.posts.count, "post") %></span></span>
   </div>
   <%= image_tag(@current_author.image, class: 'profile-img') %>
   <%= link_to "Sign out", sign_out_path, method: :delete, class: 'sign-out' %>

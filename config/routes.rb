@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 
   resources :authors, only: [:show, :update] do
     resources :posts, only: [:index, :create, :update, :destroy] do
+      resources :comments, only: [:index, :create, :update, :destroy]
     end
   end
 

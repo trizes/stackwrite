@@ -1,3 +1,4 @@
+// Removes facebook link fragment
 if (window.location.hash == '#_=_'){
   history.replaceState
     ? history.replaceState(null, null, window.location.href.split('#')[0])
@@ -8,15 +9,16 @@ $(document).ready(() => {
 
 });
 
-function getFacebookPic() {
-  let picture = $('.profile-img');
-  let src = picture.data('src');
-  if (/facebook/.test(src)) {
-    let fb_cdn_src = src + '?redirect=false';
-    $.get(fb_cdn_src).done((data) => {
-      picture.attr('src', data.data.url);
-    });
-  } else {
-    picture.attr('src', src);
+function Comments() {
+  this.toggleForm = function(element) {
+    $(element).siblings('.comment-form').toggle();
+  },
+  this.commentTemplate = function() {
+    return "<div class='comment-form'><input type='text' size='60'><button onclick='comments.submitComment(this)'>Reply!</button></div>";
+  },
+  this.submitComment = function(el) {
+    console.log(el)
   }
-}
+};
+
+let comments = new Comments();

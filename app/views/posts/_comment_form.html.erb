@@ -1,0 +1,7 @@
+<div class='comment-form'>
+  <%= form_for @current_author.comments.build(post_id: post.id), url: author_post_comments_path(post_id: post.id) do |f| %>
+    <%= render 'shared/error_messages', object: f.object %>
+    <%= f.text_field :body, size: "40" %>
+    <%= f.submit "Reply!", class: 'submit', onclick: 'comments.submitComment(this)' %>
+  <% end %>
+</div>
