@@ -5,7 +5,15 @@
     <%= link_to comment.author.name, author_posts_path(comment.author) %>
     <span><%= time_ago_in_words(comment.created_at) %> ago.</span>
     <% if @current_author %>
-      <a href="javascript:;" @click="toggleForm" class="comment-reply">Reply</a>
+      <a href="javascript:;" onclick="comments.toggleForm(this)" class="comment-reply">Reply</a>
+      <%= render partial: "/comments/reply_form", locals: { comment: comment } %>
     <% end %>
   </div>
 </div>
+<% if comment.replies.any? %>
+  <ul>
+    <li>
+      <%= render comment.replies  %>
+    </li>
+  </ul>
+<% end %>

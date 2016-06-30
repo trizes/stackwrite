@@ -1,5 +1,5 @@
 Rails.application.configure do
-  ENV['WEB_CONCURRENCY'] = "1"
+  ENV['WEB_CONCURRENCY'] = "0"
   ENV['MAX_THREADS']     = "1"
   # Settings specified here will take precedence over those in config/application.rb.
 

@@ -1,0 +1,9 @@
+<div class='comment-form'>
+  <%= form_for :comment, url: author_post_comments_path(reply_id: comment.id, post_id: comment.post.id) do |f| %>
+    <%#= render 'shared/error_messages', object: f.object %>
+    <%= f.hidden_field :reply_id, value: comment.id %>
+    <%= f.hidden_field :post_id, value: comment.post.id %>
+    <%= f.text_field :body, size: "40" %>
+    <%= f.submit "Reply!", class: 'submit', onclick: 'comments.submitComment(this)' %>
+  <% end %>
+</div>

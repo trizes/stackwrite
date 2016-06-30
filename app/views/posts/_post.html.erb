@@ -10,11 +10,11 @@
   <% end %>
     <span class="post-body"><%= post.body %></span>
   <% if @current_author%>
-  <%= render partial: 'comment_form', locals: { post: post } %>
+    <%= render partial: '/comments/comment_form', locals: { post: post } %>
   <% end %>
-  <%# if post.comments.any? %>
+  <% if post.comments.any? %>
     <% post.comments.each do |comment| %>
       <%= render partial: '/comments/comment', locals: { comment: comment } %>
     <% end %>
-  <%# end %>
+  <% end %>
 </li>
