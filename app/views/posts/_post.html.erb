@@ -12,19 +12,9 @@
   <% if @current_author%>
   <%= render partial: 'comment_form', locals: { post: post } %>
   <% end %>
-  <% if post.comments.any? %>
+  <%# if post.comments.any? %>
     <% post.comments.each do |comment| %>
-      <div id="comment-<%= comment.id %>">
-        <span class="body"><%= comment.body %></span>
-        <div class="comment-footer">
-          <span class="comment-author">Said</span>
-          <%= link_to comment.author.name, author_posts_path(comment.author) %>
-          <span><%= time_ago_in_words(post.created_at) %> ago.</span>
-          <% if @current_author %>
-            <a href="javascript:;" @click="toggleForm" class="comment-reply">Reply</a>
-          <% end %>
-        </div>
-      </div>
+      <%= render partial: '/comments/comment', locals: { comment: comment } %>
     <% end %>
-  <% end %>
+  <%# end %>
 </li>
