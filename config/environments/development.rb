@@ -1,4 +1,6 @@
 Rails.application.configure do
+  ENV['WEB_CONCURRENCY'] = "1"
+  ENV['MAX_THREADS']     = "1"
   # Settings specified here will take precedence over those in config/application.rb.
 
   # In the development environment your application's code is reloaded on
