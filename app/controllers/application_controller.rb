@@ -7,5 +7,9 @@ class ApplicationController < ActionController::Base
   private
   def current_author
     @current_author ||= Author.find(session[:author_id]) if session[:author_id]
+    rescue ActiveRecord::RecordNotFound
+      session[:author_id]  = nil
+      session[:omniauth] = nil
+      redirect_to root_url, notice: 'Your account was not found, please login again.'
   end
 end
