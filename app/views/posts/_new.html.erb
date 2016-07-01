@@ -1,6 +1,6 @@
 <div class="typer">
-  <%= form_for @new_post, url: author_posts_path do |f| %>
-    <%= render 'shared/error_messages', object: f.object %>
+  <%= form_for :post, url: author_posts_path, html: { id: 'new_post' } do |f| %>
+    <%#= render 'shared/error_messages', object: f.object %>
     <%= f.text_area :body, placeholder: "Текст сообщения..." %>
     <%= f.submit "Отправить", class: 'submit' %>
   <% end %>

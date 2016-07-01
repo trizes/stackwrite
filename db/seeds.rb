@@ -26,3 +26,12 @@ posts.each do |post|
     author.comments.create!(post: post, body: body)
   end
 end
+
+authors.each do |author|
+  comment = author.posts.first.comments.last
+  body = Faker::Hipster.word
+  comment.replies.create!(
+    body: body,
+    author: author,
+    )
+end
