@@ -33,6 +33,5 @@ authors.each do |author|
   comment.replies.create!(
     body: body,
     author: author,
-    reply: comment
     )
 end

@@ -13,8 +13,10 @@
     <%= render partial: '/comments/comment_form', locals: { post: post } %>
   <% end %>
   <% if post.comments.any? %>
-    <% post.comments.each do |comment| %>
-      <%= render partial: '/comments/comment', locals: { comment: comment } %>
-    <% end %>
+  <!-- Optimization to reduce amount of queries -->
+  <% @comments = post.comments.group_by(&:reply_id) %>
+    <div class="comments">
+      <%= render partial: '/comments/comment', collection: @comments[nil] %>
+    </div>
   <% end %>
 </li>

@@ -1,5 +1,5 @@
 class Comment < ApplicationRecord
-  belongs_to :post
+  belongs_to :post, optional: true
   belongs_to :author
   has_many   :replies,
              class_name: "Comment",

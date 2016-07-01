@@ -60,12 +60,25 @@
         width: 50px;
         height: 50px;
       }
+      ul {
+        position: relative;
+
+      }
       ul, li{
         list-style-type: none;
       }
       li {
         border-top: none;
         padding-top: 0;
+        border-left: 1px solid #999;
+        margin-left: 10px;
+        &:before {
+          content: '';
+          border-bottom: 1px solid #999;
+          position: absolute;
+          width: 2em;
+          top: 1em;
+        }
       }
     }
   }

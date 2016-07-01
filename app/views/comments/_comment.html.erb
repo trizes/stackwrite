@@ -10,10 +10,10 @@
     <% end %>
   </div>
 </div>
-<% if comment.replies.any? %>
+<% if @comments[comment.id] %>
   <ul>
     <li>
-      <%= render comment.replies  %>
+      <%= render partial: 'comments/comment', collection: @comments[comment.id] %>
     </li>
   </ul>
 <% end %>
